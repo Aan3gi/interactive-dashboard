@@ -1,4 +1,3 @@
-```javascript
 // Calculate and display the user's total weekly task goal.
 function weeklyGoal(userName, dailyGoal, bonusTasks) {
     let weeklyGoal = dailyGoal * 5;
@@ -20,5 +19,3 @@ document.getElementById("goal-btn").addEventListener("click", function(event) {
 
     weeklyGoal(userName, dailyGoal, bonusTasks);
 });
-```
-
