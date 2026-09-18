@@ -1,10 +1,23 @@
 body {
     background-color: lightblue;
     font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 h1 {
     font-size: 36px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+#weekly-tasks,
+#metric-converter {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 form {
@@ -13,7 +26,8 @@ form {
     gap: 8px;
 }
 
-input {
+input,
+select {
     padding: 8px;
 }
 
@@ -22,7 +36,12 @@ button {
     margin-top: 10px;
 }
 
-#goal-message {
+#goal-message,
+#conversion-result {
     margin-top: 20px;
     font-weight: bold;
+}
+
+#metric-converter {
+    border: 2px solid #ccc;
 }

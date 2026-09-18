@@ -26,6 +26,7 @@
 
     <div class="container">
         <div class="row">
+
             <div class="col" id="weekly-tasks">
 
                 <form>
@@ -46,6 +47,34 @@
                 <script src="js/task-manager.js"></script>
 
             </div>
+
+            <div class="col" id="metric-converter">
+
+                <form>
+                    <label for="metric-value">Value:</label>
+                    <input type="number" id="metric-value" name="metric-value">
+
+                    <label for="conversion-type">Conversion:</label>
+                    <select id="conversion-type" name="conversion-type">
+                        <option value="inch-to-centimeter">inch to centimeter</option>
+                        <option value="foot-to-centimeter">foot to centimeter</option>
+                        <option value="yard-to-meter">yard to meter</option>
+                        <option value="mile-to-kilometer">mile to kilometer</option>
+                        <option value="centimeter-to-inch">centimeter to inch</option>
+                        <option value="centimeter-to-foot">centimeter to foot</option>
+                        <option value="meter-to-yard">meter to yard</option>
+                        <option value="kilometer-to-mile">kilometer to mile</option>
+                    </select>
+
+                    <button type="submit" id="convert-btn">Convert</button>
+                </form>
+
+                <p id="conversion-result"></p>
+
+                <script defer src="js/metric-converter.js"></script>
+
+            </div>
+
         </div>
     </div>
 </body>
