@@ -4,13 +4,10 @@ This project is a web-based dashboard built for WEB-115 to demonstrate interacti
 
 ## TODO: Future Enhancements
 
-- [X] Add a metric conversion tool.
-
-- [ ] Integrate a task list with array storage.
-
-- [ ] Add JavaScript logic for a live clock.
-
-- [X] Add a weekly task goal calculator.
+* [x] Add a metric conversion tool.
+* [ ] Integrate a task list with array storage.
+* [ ] Add JavaScript logic for a live clock.
+* [x] Add a weekly task goal calculator.
 
 ## Weekly Task Goals
 
@@ -26,6 +23,7 @@ This application converts numeric values between Imperial and Metric units. It s
 BEGIN
 
     INPUT value
+
     INPUT conversion
 
     IF conversion = "inch to centimeter" THEN
@@ -64,3 +62,10 @@ BEGIN
         OUTPUT "Invalid conversion"
 
 END
+```
+
+## Magic Eight Ball
+
+The Magic Eight Ball game allows the user to type a yes/no question and click the Magic Eight Ball to receive a random answer.
+
+The game uses a JavaScript array to store possible answers and `Math.random()` to randomly select an answer. Event listeners detect when the user clicks the Magic Eight Ball and the reset button. The program also checks that the user entered a question before displaying an answer. CSS is used to animate the Magic Eight Ball when it's clicked and to display the selected answer.
