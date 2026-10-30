@@ -12,11 +12,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/magic-eight-ball.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/digital-clock.css">
 
     <!-- JavaScript -->
     <script src="js/task-manager.js" defer></script>
     <script src="js/metric-converter.js" defer></script>
     <script src="js/magic-eight-ball.js" defer></script>
+    <script src="js/digital-clock.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
         Unfortunately, your web browser does not support JavaScript.
     </noscript>
 
-    <div class="container">
+    <main class="container">
         <div class="row g-4">
 
             <!-- Weekly Tasks Section -->
@@ -144,7 +146,23 @@
             </div>
 
         </div>
-    </div>
+
+        <!-- Digital Clock Section -->
+        <div class="row mt-4">
+            <div id="digital-clock" class="col">
+
+                <h3>Current Time &amp; Date</h3>
+
+                <!-- JavaScript updates the time every second -->
+                <p id="clock-face">00:00:00 AM</p>
+
+                <!-- JavaScript displays the current date -->
+                <p id="calendar-date">Loading date...</p>
+
+            </div>
+        </div>
+
+    </main>
 
 </body>
 </html>

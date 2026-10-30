@@ -1,0 +1,54 @@
+
+/* Digital Clock Section */
+
+#digital-clock {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #ccc;
+}
+
+/* Clock Heading */
+
+#digital-clock h3 {
+    font-size: 24px;
+    color: #263238;
+    margin-bottom: 15px;
+}
+
+/* Current Time Display */
+
+#clock-face {
+    font-family: monospace;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: bold;
+    color: #2677b8;
+    margin-bottom: 10px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Current Date Display */
+
+#calendar-date {
+    font-size: 20px;
+    color: #555555;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Responsive Clock Styling */
+
+@media (max-width: 600px) {
+    #digital-clock {
+        padding: 15px;
+    }
+
+    #digital-clock h3 {
+        font-size: 20px;
+    }
+
+    #calendar-date {
+        font-size: 16px;
+    }
+}
