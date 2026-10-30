@@ -3,7 +3,7 @@
 
 This project is a web-based dashboard built for WEB-115 to demonstrate interactive JavaScript features.
 
-The dashboard includes a weekly task goal calculator, dynamic task manager, metric converter, and Magic Eight Ball game.
+The dashboard includes a weekly task goal calculator, dynamic task manager, metric converter, Magic Eight Ball game, and real-time digital clock.
 
 ## TODO: Future Enhancements
 
@@ -12,7 +12,8 @@ The dashboard includes a weekly task goal calculator, dynamic task manager, metr
 - [x] Add priority, importance, and completion status to tasks.
 - [x] Allow users to edit and delete tasks.
 - [x] Log task updates using JSON.stringify().
-- [ ] Add JavaScript logic for a live clock.
+- [x] Add JavaScript logic for a live clock.
+- [x] Display the current date using the Date object.
 - [x] Add a weekly task goal calculator.
 
 ## Weekly Task Goals
@@ -167,6 +168,70 @@ The program also checks that the user entered a question before displaying an an
 
 CSS is used to animate the Magic Eight Ball when it is clicked and to display the selected answer.
 
+## Digital Clock and Date
+
+The Digital Clock displays the user's current local time and calendar date.
+
+The application uses JavaScript's Date object to retrieve the hours, minutes, and seconds using getHours(), getMinutes(), and getSeconds().
+
+The time is converted from 24-hour format to 12-hour format using an AM/PM session variable.
+
+Conditional statements add leading zeros to single-digit hours, minutes, and seconds.
+
+The current date is displayed using the toLocaleDateString() method.
+
+The updateClock() function updates the webpage using innerHTML.
+
+The setInterval() method runs updateClock() every 1000 milliseconds, allowing the clock to update every second.
+
+The clock is styled using a separate digital-clock.css file and includes responsive formatting for smaller screens.
+
+### Digital Clock Logic and Pseudocode
+
+BEGIN
+
+    CREATE updateClock function
+
+    GET current date and time using Date object
+
+    GET hours
+    GET minutes
+    GET seconds
+
+    SET session to AM
+
+    IF hours >= 12 THEN
+        SET session to PM
+    END IF
+
+    CONVERT hours to 12-hour format
+
+    IF hours equals 0 THEN
+        SET hours to 12
+    END IF
+
+    IF hours < 10 THEN
+        ADD leading zero
+    END IF
+
+    IF minutes < 10 THEN
+        ADD leading zero
+    END IF
+
+    IF seconds < 10 THEN
+        ADD leading zero
+    END IF
+
+    FORMAT time with AM/PM
+
+    GET current date using toLocaleDateString()
+
+    DISPLAY time and date using innerHTML
+
+    REPEAT updateClock every 1000 milliseconds
+
+END
+
 ## Technologies Used
 
 - HTML
@@ -177,7 +242,7 @@ CSS is used to animate the Magic Eight Ball when it is clicked and to display th
 
 ## Testing
 
-The Task Manager was designed to support the following tests:
+### Task Manager
 
 1. Add a new task with a name and priority.
 2. Mark a task as important and verify red highlighting.
@@ -187,4 +252,20 @@ The Task Manager was designed to support the following tests:
 6. Delete an individual task.
 7. Delete the entire task list.
 8. Verify that JSON updates appear in the browser console.
-9. Check that the page is responsive on smaller screens.
+
+### Digital Clock
+
+1. Confirm the clock displays the current local time.
+2. Confirm the seconds update automatically.
+3. Verify leading zeros appear for single-digit values.
+4. Confirm the correct AM/PM session is displayed.
+5. Confirm the current date appears correctly.
+6. Test the clock layout on smaller screens.
+
+### Dashboard
+
+1. Check that the dashboard is responsive on smaller screens.
+2. Verify the weekly goal calculator works.
+3. Verify the metric converter works.
+4. Verify the Magic Eight Ball works.
+5. Verify the digital clock does not interfere with other features.
